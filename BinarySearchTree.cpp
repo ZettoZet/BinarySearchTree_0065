@@ -24,6 +24,11 @@ public:
     {
         ROOT = nullptr; // Initialize the root of the tree to nullptr
     }
+    void search(int element, Node *&parent, Node *&currentNode)
+    {
+        
+    }
+
     
 };
 
