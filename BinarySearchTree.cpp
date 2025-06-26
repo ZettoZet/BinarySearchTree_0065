@@ -96,6 +96,24 @@ public:
         // Checks if the tree is empty
         return ROOT == nullptr;
     }
+
+    void inorder (Node *ptr)
+    {
+        if (isEmpty())
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+        if (ptr == nullptr)
+        {
+            return;
+        }
+
+        inorder(ptr->leftchild); // Traverse the left child
+        cout << ptr->info << " "; // parent
+        inorder(ptr->rightchild); // Traverse the right child
+    }
+
 };
 
 int main()
