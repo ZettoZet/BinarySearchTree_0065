@@ -131,7 +131,22 @@ public:
         preorder(ptr->rightchild); // Traverse the right child
     }
 
+    void postorder (Node *ptr)
+    {
+        if (isEmpty())
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+        if (ptr == nullptr)
+        {
+            return;
+        }
 
+        postorder(ptr->leftchild); // Traverse the left child
+        postorder(ptr->rightchild); // Traverse the right child
+        cout << ptr->info << " "; // parent
+    }
 };
 
 int main()
