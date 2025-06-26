@@ -15,7 +15,10 @@ public:
     }
 };
 
+class BinaryTree
+{
 
+};
 
 int main()
 {
