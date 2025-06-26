@@ -151,5 +151,53 @@ public:
 
 int main()
 {
-    
+    BinaryTree tree;
+    while (true)
+    {
+        cout << "\nMenu" << endl;
+        cout << "1. Implement insert operation" << endl;
+        cout << "2. Perform inorder traversal" << endl;
+        cout << "3. Perform preorder traversal" << endl;
+        cout << "4. Perform postorder traversal" << endl;
+        cout << "5. Exit" << endl;
+        cout << "\nEnter your choice (1-5) : ";
+
+        char ch;
+        cin >> ch;
+        cout << endl;
+
+        switch (ch)
+        {
+        case '1':
+        {
+            tree.insert();
+            break;
+        }
+        case '2':
+        {
+            tree.inorder(tree.ROOT);
+            break;
+        }
+        case '3':
+        {
+
+            tree.preorder(tree.ROOT);
+            break;
+        }
+        case '4':
+        {
+
+            tree.postorder(tree.ROOT);
+            break;
+        }
+        case '5':
+            return 0;
+        default:
+        {
+            cout << "Invalid option" << endl;
+            break;
+        }
+        }
+    }
+
 }
